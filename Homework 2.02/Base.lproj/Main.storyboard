@@ -17,18 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2K6-OS-KBK" userLabel="Red Signal View">
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2K6-OS-KBK" userLabel="Red Signal View">
                                 <rect key="frame" x="110" y="79" width="173" height="173"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2K6-OS-KBK" secondAttribute="height" multiplier="1:1" id="nQR-cZ-p2P"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sug-nO-VaM" userLabel="Yellow Signal View">
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sug-nO-VaM" userLabel="Yellow Signal View">
                                 <rect key="frame" x="110" y="282" width="173" height="173"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0TJ-Zp-jhi" userLabel="Green Signal View">
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0TJ-Zp-jhi" userLabel="Green Signal View">
                                 <rect key="frame" x="110" y="485" width="173" height="173"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
@@ -43,6 +43,9 @@
                                 <state key="normal" title="START">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="startButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="74Z-hw-yaa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -63,6 +66,12 @@
                             <constraint firstItem="0TJ-Zp-jhi" firstAttribute="top" secondItem="sug-nO-VaM" secondAttribute="bottom" constant="30" id="uOA-QA-sox"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenSignalView" destination="0TJ-Zp-jhi" id="OlF-gc-d6E"/>
+                        <outlet property="redSignalView" destination="2K6-OS-KBK" id="cL8-NY-LAZ"/>
+                        <outlet property="startButton" destination="Qyn-Co-XNg" id="saV-gc-F9e"/>
+                        <outlet property="yellowSignalView" destination="sug-nO-VaM" id="1ju-GN-Wgv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
