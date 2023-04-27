@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait" appearance="dark"/>
+    <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,26 +14,31 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Homework_2_02" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2K6-OS-KBK" userLabel="Red Signal View">
-                                <rect key="frame" x="110" y="20" width="100" height="100"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="2K6-OS-KBK" secondAttribute="height" multiplier="1:1" id="nQR-cZ-p2P"/>
-                                </constraints>
-                            </view>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sug-nO-VaM" userLabel="Yellow Signal View">
-                                <rect key="frame" x="110" y="150" width="100" height="100"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0TJ-Zp-jhi" userLabel="Green Signal View">
-                                <rect key="frame" x="110" y="280" width="100" height="100"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="NU6-tb-ExA">
+                                <rect key="frame" x="137" y="40" width="101" height="389"/>
+                                <subviews>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2K6-OS-KBK" userLabel="Red Signal View">
+                                        <rect key="frame" x="0.0" y="0.0" width="101" height="101"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="2K6-OS-KBK" secondAttribute="height" multiplier="1:1" id="Nag-0T-pqc"/>
+                                        </constraints>
+                                    </view>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sug-nO-VaM" userLabel="Yellow Signal View">
+                                        <rect key="frame" x="0.0" y="144" width="101" height="101"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </view>
+                                    <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vjx-oU-L2U" userLabel="Green Signal View">
+                                        <rect key="frame" x="0.0" y="288" width="101" height="101"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qyn-Co-XNg">
-                                <rect key="frame" x="75" y="489" width="170" height="41"/>
+                                <rect key="frame" x="102.5" y="581.5" width="170" height="41"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="U5K-B0-29t"/>
@@ -52,22 +57,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Qyn-Co-XNg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6a2-e5-tg3"/>
-                            <constraint firstItem="sug-nO-VaM" firstAttribute="leading" secondItem="2K6-OS-KBK" secondAttribute="leading" id="7Om-nC-pi1"/>
-                            <constraint firstItem="0TJ-Zp-jhi" firstAttribute="width" secondItem="sug-nO-VaM" secondAttribute="height" multiplier="1:1" id="EYm-J7-moA"/>
-                            <constraint firstItem="2K6-OS-KBK" firstAttribute="height" secondItem="sug-nO-VaM" secondAttribute="height" id="HVn-4X-TC6"/>
-                            <constraint firstItem="0TJ-Zp-jhi" firstAttribute="height" secondItem="sug-nO-VaM" secondAttribute="height" id="Jt1-hr-hAl"/>
-                            <constraint firstItem="sug-nO-VaM" firstAttribute="top" secondItem="2K6-OS-KBK" secondAttribute="bottom" constant="30" id="So0-t0-RnS"/>
-                            <constraint firstItem="0TJ-Zp-jhi" firstAttribute="leading" secondItem="sug-nO-VaM" secondAttribute="leading" id="Uly-Cf-bIr"/>
+                            <constraint firstItem="NU6-tb-ExA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F96-v4-q1s"/>
+                            <constraint firstItem="NU6-tb-ExA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="SbM-Kr-iRp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qyn-Co-XNg" secondAttribute="bottom" multiplier="15:14" id="VxO-4Q-Jg0"/>
-                            <constraint firstItem="sug-nO-VaM" firstAttribute="width" secondItem="2K6-OS-KBK" secondAttribute="width" id="W4x-67-tr9"/>
-                            <constraint firstItem="2K6-OS-KBK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Z39-Pn-3x4"/>
-                            <constraint firstItem="2K6-OS-KBK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="dRQ-uQ-2EU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2K6-OS-KBK" secondAttribute="trailing" constant="110" id="icU-pv-tYr"/>
-                            <constraint firstItem="0TJ-Zp-jhi" firstAttribute="top" secondItem="sug-nO-VaM" secondAttribute="bottom" constant="30" id="uOA-QA-sox"/>
+                            <constraint firstItem="NU6-tb-ExA" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.583208" id="vEc-mY-JG4"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="greenSignalView" destination="0TJ-Zp-jhi" id="OlF-gc-d6E"/>
+                        <outlet property="greenSignalView" destination="Vjx-oU-L2U" id="b7M-m9-vE5"/>
                         <outlet property="redSignalView" destination="2K6-OS-KBK" id="cL8-NY-LAZ"/>
                         <outlet property="startButton" destination="Qyn-Co-XNg" id="saV-gc-F9e"/>
                         <outlet property="yellowSignalView" destination="sug-nO-VaM" id="1ju-GN-Wgv"/>
